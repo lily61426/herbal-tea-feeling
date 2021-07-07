@@ -344,18 +344,6 @@ a {
   top: -130px;
 }
 
-.index-product-news-img1 {
-  background-image: url("../../image/i1.jpg");
-}
-
-.index-product-news-img2 {
-  background-image: url("../../image/i2.jpg");
-}
-
-.index-product-news-img3 {
-  background-image: url("../../image/i3.jpg");
-}
-
 .productNews {
   flex-wrap: wrap;
   display: flex;
@@ -646,30 +634,6 @@ main .brandNews .brandNews-content p {
 }
 .indexProductSize .shopping-btn a:hover {
   color: #FFF;
-}
-
-.product-1 {
-  background-image: url("../../image/p1.jpg");
-}
-
-.product-2 {
-  background-image: url("../../image/p2.jpg");
-}
-
-.product-3 {
-  background-image: url("../../image/p3.jpg");
-}
-
-.product-4 {
-  background-image: url("../../image/p4.jpg");
-}
-
-.product-5 {
-  background-image: url("../../image/p5.jpg");
-}
-
-.product-6 {
-  background-image: url("../../image/p6.jpg");
 }
 
 .mail-control {
