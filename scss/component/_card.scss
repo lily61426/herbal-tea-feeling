@@ -1,0 +1,82 @@
+.indexProduct {
+  width: 620px; 
+}
+ 
+  .indexProductSize {
+    width: 300px;
+    .indexProduct-img-control {
+      position: relative;
+      .indexProduct-img {
+        max-width: 300px;
+        height: 315px;
+        background-size: cover;
+        background-position: center;
+      }
+      .indexProduct-label {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        h3 {
+          padding: $sp-2;
+          color: $wht;
+          letter-spacing: $sp;
+          background-color: $cis;
+          @include f-1;
+          writing-mode: vertical-rl;
+        }
+        .flavor-icon {
+          position: absolute;
+          margin: 15px 245px;
+          color: $cis;
+        }
+      }
+    }
+    .indexProduct-name {
+      padding: $sp-3 $sp-6 $sp-3 $sp-5;
+      border: 2px solid $l-gray;
+      letter-spacing: 1px;
+      @include f-2;
+    }
+    .prductPrice {
+      margin-left: -2px;
+      padding: $sp-3 27.5px $sp-3 $sp-5;
+      border: 2px solid $l-gray;
+      @include f-2;
+    }
+    .shopping-btn {
+      text-align: center;
+      a {
+        padding: $sp-3 0px;
+        display: block;
+        background-color: $l-cis;
+        color: $cis;
+        @include f-2;
+       transition: 0.8s ease-out 0s;
+       &:hover{
+         color: $wht;
+       }
+      }
+    }
+  }
+
+
+
+.product-1 {
+  background-image: url("../../image/p1.jpg");
+  
+}
+.product-2 {
+  background-image: url("../../image/p2.jpg");
+}
+.product-3 {
+  background-image: url("../../image/p3.jpg");
+}
+.product-4 {
+  background-image: url("../../image/p4.jpg");
+}
+.product-5 {
+  background-image: url("../../image/p5.jpg");
+}
+.product-6 {
+  background-image: url("../../image/p6.jpg");
+}

@@ -1,0 +1,93 @@
+// navbar start
+.header-bg {
+  background-color: $wht;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  .header {
+    .left {
+      display: flex;
+      align-items: center;
+    }
+    .mynav {
+      display: flex;
+      text-align: center;
+      // padding: $sp-7;
+      li {
+        padding: $sp-2;
+        a {
+          display: block;
+          padding: $sp-3 $sp-6;
+          @include f-1;
+          color: lighten($cis, 30%);
+          &:hover {
+            color: $cis;
+            font-weight: bold;
+            transition: 0.5s ease-out 0s;
+          }
+        }
+      }
+    }
+    .icon-cart {
+      // margin-right: 20px;
+      padding: $sp-3 $sp-6;
+      position: relative;
+      display: none;
+      i {
+        color: $cis;
+      }
+    }
+    .navBar {
+      display: none;
+      width: 72px;
+      text-align: center;
+      color: $cis;
+    }
+  }
+
+  @include pad {
+    .container {
+      padding: $sp-2;
+      position: relative;
+      justify-content: space-between;
+      .mynav {
+        // display: none;
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        max-height: 0px;
+        transition: all 0.8s;
+        // background-color: $cis-color;
+
+        li {
+          border-top: 2px dotted $y-cis;
+          background-color: $wht;
+          a {
+            padding: $sp-4;
+            color: $y-cis;
+            background-color: $wht;
+            &:hover {
+              color: $cis;
+              background-color: $l-cis;
+            }
+          }
+        }
+      }
+      .mynav.active {
+        max-height: 230px;
+      }
+      .icon-cart {
+        font-size: $fz-3;
+        display: block;
+      }
+      .navBar {
+        font-size: $fz-3;
+        display: block;
+      }
+    }
+  }
+}

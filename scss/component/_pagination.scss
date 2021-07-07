@@ -1,0 +1,268 @@
+// iteam start
+
+main {
+  margin-top: $sp-11;
+  flex-wrap: wrap;
+  .product-items-area {
+    display: flex;
+    justify-content: space-between;
+    .product-items {
+      padding: $sp-2 0px;
+      width: 300px;
+      height: 245px;
+      text-align: center;
+      color: $l-gray;
+      background-color: $cis;
+
+      li {
+        background-color: $l-cis;
+        border-bottom: 1px solid $cis;
+        .product-items-list {
+          padding: $sp-3;
+          display: block;
+        }
+      }
+    }
+  }
+}
+.product-items-abled {
+  color: $cis;
+}
+.product-items-Disabled {
+  color: $l-cis;
+  background-color: $y-cis;
+  padding: $sp-3;
+  // cursor: not-allowed;
+  // opacity: 0.5;
+  @include f-2;
+}
+
+// pag start
+.page {
+  justify-content: flex-end;
+  li {
+    a {
+      margin-left: -1px;
+      color: lighten($cis, 30%);
+      display: block;
+      padding: $sp-3 $sp-4;
+      border-right: 1px solid $cis;
+      border-left: 1px solid $cis;
+      transition: 0.3s ease-in 0s;
+      &:hover {
+        color: $wht;
+        background-color: $cis;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.page-btn-active {
+  background-color: $cis;
+}
+
+//account start
+.account-m {
+  margin-top: 150px;
+}
+.login-area-control {
+  display: flex;
+  justify-content: center;
+  .login-area {
+    padding: $sp-3;
+    width: 300px;
+    text-align: center;
+    background-color: $l-cis;
+    h2 {
+      @include f-3;
+      writing-mode: horizontal-tb;
+      background-color: $l-cis;
+      padding: $sp-3 0px;
+    }
+    .account {
+      text-align: start;
+      .account-icon-w {
+        width: 100%;
+        border: 1px solid $wht;
+      }
+      .account-icon {
+        width: 40px;
+        background-color: #fff;
+        text-align: center;
+        i {
+          margin: $sp-2;
+          color: $cis;
+        }
+      }
+    }
+  }
+  .account-social {
+    a {
+      text-align: center;
+      background-color: lighten($cis, 30%);
+      display: block;
+      padding: $sp-4;
+      margin: $sp;
+      transition: 0.3s ease-in 0s;
+      &:hover {
+        background-color: $y-cis;
+      }
+      img {
+        height: 35px;
+      }
+    }
+  }
+  .account-btn {
+    display: block;
+    padding: $sp-4;
+    text-align: center;
+    color: $wht;
+    background-color: $cis;
+    transition: 0.3s ease-in 0s;
+    &:hover {
+      background-color: $y-cis;
+    }
+  }
+}
+
+//cart product start
+.cart-product {
+  margin-top: 67px;
+  .yourCart-control {
+    width: 620px;
+    h2 {
+      padding: $sp-4 0px;
+      @include f-3;
+      background-color: $l-cis;
+      writing-mode: horizontal-tb;
+      text-align: center;
+      span {
+        @include f-1;
+      }
+    }
+    .cart-product-control {
+      justify-content: space-between;
+      align-items: center;
+      margin: $sp-6 0px;
+
+      img {
+        width: 110px;
+      }
+      .cart-product-name {
+        h3 {
+          @include f-2;
+          margin-bottom: 3px;
+        }
+      }
+      .product-quantity {
+        a,
+        p {
+          padding: $sp-3 $sp-4;
+          border: 1px solid $l-cis;
+          color: $cis;
+        }
+        a:hover {
+          font-weight: bolder;
+          color: $wht;
+          background-color: $cis;
+        }
+      }
+      a {
+        color: $y-cis;
+      }
+    }
+  }
+  .list-items {
+    margin-top: 60px;
+    width: 300px;
+
+    h2 {
+      padding: $sp-4 0px;
+      @include f-3;
+      font-weight: bolder;
+      background-color: $l-cis;
+      text-align: center;
+      letter-spacing: 5px;
+    }
+    .list-content {
+      padding: $sp-3;
+      border: 2px solid $l-cis;
+      p {
+        @include f-1;
+        line-height: 25px;
+      }
+    }
+    a {
+      @include f-2;
+      padding: $sp-3 0px;
+      text-align: center;
+      display: block;
+      background-color: $cis;
+      color: $wht;
+      transition: 0.3s ease-in 0s;
+      &:hover {
+        background-color: $y-cis;
+      }
+    }
+  }
+}
+
+//cart information
+//購物清單
+.list-items {
+  img {
+    margin: $sp-2;
+    width: 110px;
+  }
+}
+
+//運送＆確認結帳
+
+.shippingInformation {
+  width: 620px;
+  h2 {
+    padding: $sp-4 0px;
+    @include f-4;
+    color: $wht;
+    background-color: $cis;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    span {
+      @include f-2;
+    }
+  }
+  .fillInTheInformation {
+    padding: $sp-6;
+    background-color: $cis;
+    .information-name {
+      width: 48%;
+    }
+    .information-fillIn {
+      width: 100%;
+      height: 50px;
+      margin-bottom: $sp-6;
+    }
+    .information-fillIn-2 {
+      width: 100%;
+      height: 88px;
+      margin-bottom: $sp-6;
+    }
+    p {
+      @include f-2;
+      color: $wht;
+      margin-bottom: $sp;
+    }
+    a {
+      @include f-2;
+      color: $cis;
+      font-weight: bolder;
+      display: block;
+      margin: $sp-8 $sp-12;
+      padding: $sp-4 0px;
+      text-align: center;
+      background-color: $l-cis;
+
+    }
+  }
+}

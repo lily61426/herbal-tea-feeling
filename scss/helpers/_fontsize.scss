@@ -1,0 +1,48 @@
+/*  font-size */
+$fz-base:4px;
+
+$fz-1:$fz-base * 4;
+$fz-2:$fz-base * 5;
+$fz-3:$fz-base * 6;
+$fz-4:$fz-base * 7;
+$fz-5:$fz-base * 8;
+$fz-6:$fz-base * 9;
+$fz-7:$fz-base * 10;
+
+
+
+/*  行高 space */
+$lh:4px;
+
+$lh-1:$lh * 4;
+$lh-2:$lh * 5;
+$lh-3:$lh * 6;
+$lh-4:$lh * 7;
+$lh-5:$lh * 8;
+$lh-6:$lh * 9;
+$lh-7:$lh * 10;
+$lh-8:$lh * 11;
+$lh-9:$lh * 12;
+$lh-10:$lh * 13;
+
+@mixin f-1 {
+  font-size: $fz-1;
+  line-height: $lh-1;
+}
+@mixin f-2 {
+  font-size: $fz-2;
+  line-height: $lh-3;
+}
+@mixin f-3 {
+  font-size: $fz-3;
+  line-height: $lh-4;
+}
+@mixin f-4 {
+  font-size: 34px;
+  line-height: 40px;
+  writing-mode: vertical-rl;
+}
+
+.fontSerif{
+  font-family: 'Noto Serif TC';
+}

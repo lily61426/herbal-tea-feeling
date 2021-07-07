@@ -1,0 +1,162 @@
+
+
+/*   space */
+$sp:5px;
+
+$sp-2:$sp * 2;
+$sp-3:$sp * 3;
+$sp-4:$sp * 4;
+$sp-5:$sp * 5;
+$sp-6:$sp * 6;
+$sp-7:$sp * 7;
+$sp-8:$sp * 8;
+$sp-9:$sp * 9;
+$sp-10:$sp * 10;
+$sp-11:$sp * 12;
+$sp-12:$sp * 16;
+$sp-13:$sp * 20;
+
+.mr-0{
+  margin-right: $sp;
+}
+.mr-1{
+  margin-right: $sp-6;
+}
+.mr-2{
+  margin-right: $sp-10;
+}
+.mr-3{
+  margin-right: $sp-12;
+}
+.mr-4{
+  margin-right: 80px;
+}
+.mr-5{
+  margin-right: 105px;
+}
+
+.ml-0{
+  margin-left: $sp;
+}
+.ml-1{
+  margin-left: $sp-6;
+}
+.ml-2{
+  margin-left: $sp-10;
+}
+.ml-3{
+  margin-left: $sp-12;
+}
+.ml-4{
+  margin-left: 80px;
+}
+.ml-5{
+  margin-left: 105px;
+}
+
+.mb-1{
+  margin-bottom: $sp-6;
+}
+.mb-2{
+  margin-bottom: $sp-10;
+}
+.mb-3{
+  margin-bottom: $sp-12;
+}
+.mb-4{
+  margin-bottom: 80px;
+}
+.mb-5{
+  margin-bottom: 110px;
+}
+
+
+.mt-1{
+  margin-top: $sp-6;
+}
+.mt-2{
+  margin-top: $sp-10;
+}
+.mt-3{
+  margin-top: $sp-12;
+}
+.mt-4{
+  margin-top: 80px;
+}
+.mt-5{
+  margin-top: 110px;
+}
+
+.mtb-1{
+  margin-top: $sp-3;
+  margin-bottom: $sp-3;
+
+}
+
+//左邊-1px
+.ml--1{
+  margin-left: -1px;
+}
+// 粗細
+.fw-1{
+  font-weight: bold;
+}
+.fw-2{
+  font-weight: bolder;
+}
+@mixin td-ul {
+  text-decoration: underline;
+}
+
+
+@mixin pad {
+  @media (max-width:768px){
+      @content;
+  }
+} 
+
+@mixin phone {
+  @media (max-width:576px){
+      @content;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+.jc-center {
+  justify-content: center;
+}
+.jc-flexEnd {
+  justify-content:flex-end;
+}
+.jc-flexstart {
+  justify-content:flex-start;
+}
+
+.ac-flexEnd {
+  align-content:flex-end;
+}
+.ai-center {
+  align-items: center;
+}
+.ai-flexEnd {
+  align-items: flex-end;
+}
+
+.whiteSpace{
+  white-space:pre-line;
+}
+.fd-rowReverse{
+  flex-direction: row-reverse;
+}
+.fd-columnReverse{
+  flex-direction:column-reverse;
+}
+.f-wrap{
+  flex-wrap: wrap;
+}

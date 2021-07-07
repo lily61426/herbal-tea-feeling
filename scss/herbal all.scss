@@ -1,0 +1,48 @@
+@import "base/reset";
+@import "helpers/variables";
+@import "helpers/color";
+@import "helpers/fontsize";
+@import "helpers/background";
+@import "component/navbar";
+@import "component/card";
+@import "component/footer";
+@import "component/pagination";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap');
+
+
+
+@mixin container{
+  max-width: 1000px;
+  padding: 0px $sp-6;
+  margin: 0px auto;
+}
+.container{
+  @include container;
+}
+.container-md{
+  max-width: 840px;
+  padding: 0px $sp-6;
+  margin: 0px auto;
+}
+
+
+@mixin pad {
+  @media (max-width:768px){
+      @content;
+  }
+} 
+
+@mixin phone {
+  @media (max-width:576px){
+      @content;
+  }
+}
+
+@include pad {
+  .container{
+    width: 100%;
+    padding: 0px;
+    margin: 0px auto;
+    
+  }
+}

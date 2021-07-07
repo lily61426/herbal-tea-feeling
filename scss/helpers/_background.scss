@@ -1,0 +1,191 @@
+//index banner-1 start
+.banner1 {
+  img {
+    margin-top: 66px;
+    max-width: 100%;
+  }
+}
+
+//product banner-2 start
+.banner2 {
+  position: relative;
+
+  img {
+    margin-top: 66px;
+    max-width: 100%;
+  }
+  h2 {
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 130px;
+    right: 100px;
+    z-index: 50;
+    @include f-4;
+    font-weight: bolder;
+    color: $l-gray;
+    line-height: $lh-9;
+    letter-spacing: $sp;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
+  }
+}
+
+.productNews-style {
+  height: 260px;
+  width: 256px;
+  background-size: cover;
+  position: relative;
+  top: -130px;
+}
+
+.index-product-news-img1 {
+  background-image: url("../../image/i1.jpg");
+}
+
+.index-product-news-img2 {
+  background-image: url("../../image/i2.jpg");
+}
+.index-product-news-img3 {
+  background-image: url("../../image/i3.jpg");
+}
+
+.productNews {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+.index-product-news-btn {
+  background-color: $cis-30;
+  color: $l-cis;
+  position: absolute;
+  width: 256px;
+  height: 260px;
+  backdrop-filter: blur(7px);
+  &:hover {
+    background-color: $y-cis;
+    color: $l-gray;
+  }
+  &:active {
+    box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.735);
+  }
+  span {
+    writing-mode: vertical-lr;
+    @include f-3;
+    letter-spacing: 5px;
+  }
+}
+
+@include pad {
+  .productNews {
+    flex-wrap: nowrap;
+
+    .productNews-style {
+      max-width: 195px;
+      top: -10px;
+      .index-product-news-btn {
+        max-width: 195px;
+      }
+    }
+  }
+}
+@include phone {
+  .productNews {
+    flex-wrap: nowrap;
+
+    .productNews-style {
+      max-width: 120px;
+      top: -10px;
+      .index-product-news-btn {
+        max-width: 120px;
+      }
+    }
+  }
+}
+
+//log in banner-3 start
+.banner3 {
+  position: relative;
+
+  img {
+    margin-top: 66px;
+    max-width: 100%;
+  }
+  .successful-purchase {
+    position: absolute;
+    top: 350px;
+    left: 380px;
+    text-align: center;
+
+    h2 {
+      font-size: $fz-5;
+      font-weight: bolder;
+      letter-spacing: 2px;
+      color: $wht;
+      text-shadow: 3px 3px 0.3rem $blk;
+    }
+    a {
+      display: block;
+      padding: $sp-4 $sp-12;
+      @include f-2;
+      background-color: $y-cis;
+      color: $l-gray;
+      box-shadow: 2px 2px 0.5em $blk;
+    }
+  }
+}
+
+
+// index slogan  start
+main {
+  .slogan {
+    position: relative;
+    top: -80px;
+    z-index: 50;
+    color: $y-cis;
+  }
+  .slogan2 {
+    position: relative;
+    top: -15px;
+    left: 380px;
+    z-index: 50;
+    color: $y-cis;
+  }
+  .slogan3 {
+    color: $y-cis;
+    line-height: $lh-9;
+  }
+  h2 {
+    @include f-4;
+    letter-spacing: 5px;
+    font-weight: bold;
+  }
+  .img-1 {
+    max-width: 460px;
+    position: absolute;
+    top: 980px;
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.413);
+    z-index: 50;
+  }
+  .img-2 {
+    max-width: 460px;
+    position: absolute;
+    top: 1490px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.413);
+    z-index: 50;
+  }
+
+  .brandNews {
+    background-color: $l-cis;
+    margin-top: -250px;
+    .brandNews-content {
+      height: 420px;
+      p {
+        white-space: pre-line;
+        font-size: $fz-1;
+        line-height: $lh-5;
+        letter-spacing: 2px;
+        writing-mode: vertical-rl;
+        height: 250px;
+      }
+    }
+  }
+}
