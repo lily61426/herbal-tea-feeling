@@ -69,7 +69,9 @@ $sp-13:$sp * 20;
 .mb-5{
   margin-bottom: 110px;
 }
-
+.mb-6{
+  margin-bottom: 210px;
+}
 
 .mt-1{
   margin-top: $sp-6;
@@ -90,7 +92,10 @@ $sp-13:$sp * 20;
 .mtb-1{
   margin-top: $sp-3;
   margin-bottom: $sp-3;
-
+}
+.mrl-1{
+  margin-right: $sp-3;
+  margin-left: $sp-3;
 }
 
 //左邊-1px

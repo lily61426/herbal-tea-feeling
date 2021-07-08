@@ -3,39 +3,55 @@
   color: $l-gray;
   background-color: $cis;
   padding: $sp-4 0px;
-  .mail-content {
-    p {
-      @include f-2;
-      letter-spacing: $sp;
+  .mail {
+    display: flex;
+    justify-content: space-between;
+    .mail-content {
+      p {
+        @include f-2;
+        letter-spacing: $sp;
+      }
+    }
+    .send-control {
+      border: 1px solid $cis;
+      .mail-icons {
+        font-size: 18px;
+        padding: $sp-3;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        background-color: $l-gray;
+        color: $cis;
+      }
+      .form-input {
+        width: 150%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-color: $l-gray;
+        border: none;
+        outline: none;
+      }
+      .send-btn {
+        font-size: 18px;
+        color: $wht;
+        width: 100px;
+        background: $y-cis;
+        border: 0;
+        cursor: pointer;
+      }
     }
   }
-  .send-control {
-    border: 1px solid $cis;
-    .mail-icons {
-      font-size: 18px;
-      padding: $sp-3;
-      text-transform: none;
-      display: inline-block;
-      white-space: nowrap;
-      word-wrap: normal;
-      background-color: $l-gray;
-      color: $cis;
-    }
-    .form-input {
-      width: 150%;
-      padding-top: 16px;
-      padding-bottom: 16px;
-      background-color: $l-gray;
-      border: none;
-      outline: none;
-    }
-    .send-btn {
-      font-size: 18px;
-      color: $wht;
-      width: 100px;
-      background: $y-cis;
-      border: 0;
-      cursor: pointer;
+}
+
+@include phone {
+  .mail-control {
+    .mail {
+      display: block;
+      .mail-content {
+      justify-content: center;
+      margin-bottom: $sp-3;
+      }
     }
   }
 }
@@ -46,11 +62,39 @@ footer {
   .footer-control {
     .footer-p {
       padding: $sp-8 0px $sp-6;
+      .footer-h5 {
+        font-size: $fz-1;
+        line-height: $sp-5;
+        a {
+          color: $cis;
+          letter-spacing: 1px;
+          transition: 0.5s ease-out;
+          &:hover {
+            color: darken($cis, 15%);
+            font-weight: bold;
+          }
+          &:active {
+            color: $y-cis;
+          }
+        }
+      }
+      .socialMedia {
+        a {
+          color: $cis;
+          transition: 0.5s ease-out;
+          &:hover {
+            color: darken($cis, 15%);
+          }
+          &:active {
+            color: $y-cis;
+          }
+        }
+      }
     }
     .brand-slogan {
       padding: $sp-8 0px $sp-6;
       position: relative;
-      h4 {
+      .slogen-4 {
         @include f-3;
         font-family: serif;
         font-weight: bolder;
@@ -63,33 +107,19 @@ footer {
     }
   }
 }
-
-h5 {
-  font-size: $fz-1;
-  line-height: $sp-5;
-  a {
-    color: $cis;
-    letter-spacing: 1px;
-    transition: 0.5s ease-out;
-    &:hover {
-      color: darken($cis, 15%);
-      font-weight: bold;
-    }
-    &:active {
-      color: $y-cis;
-    }
-  }
+.footer-md-dn {
+  display: none;
+}
+.brand-slogan-control {
+  display: flex;
+  align-items: flex-end;
 }
 
-.socialMedia {
-  a {
-    color: $cis;
-    transition: 0.5s ease-out;
-    &:hover {
-      color: darken($cis, 15%);
-    }
-    &:active {
-      color: $y-cis;
-    }
+@include pad {
+  .footer-md-dn {
+    display: block;
+  }
+  .brand-slogan-control {
+    display: none;
   }
 }

@@ -1,62 +1,85 @@
 .indexProduct {
-  width: 620px; 
+  width: 620px;
 }
- 
-  .indexProductSize {
-    width: 300px;
-    .indexProduct-img-control {
-      position: relative;
-      .indexProduct-img {
-        max-width: 300px;
-        height: 315px;
-        background-size: cover;
-        background-position: center;
+@include pad {
+  .indexProduct {
+    margin: $sp-11 auto $sp;
+    width: 95%;
+  }
+}
+@include phone {
+  .indexProduct {
+    margin: $sp-12 auto $sp;
+    width: 90%;
+    .m-xs {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.indexProductSize {
+  width: 300px;
+  
+  .indexProduct-img-control {
+    position: relative;
+    .indexProduct-img {
+      max-width: 300px;
+      height: 315px;
+      background-size: cover;
+      background-position: center;
+    }
+    .indexProduct-label {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      h3 {
+        padding: $sp-2;
+        color: $wht;
+        letter-spacing: $sp;
+        background-color: $cis;
+        @include f-1;
+        writing-mode: vertical-rl;
       }
-      .indexProduct-label {
+      .flavor-icon {
         position: absolute;
-        top: 0;
-        left: 20px;
-        h3 {
-          padding: $sp-2;
-          color: $wht;
-          letter-spacing: $sp;
-          background-color: $cis;
-          @include f-1;
-          writing-mode: vertical-rl;
-        }
-        .flavor-icon {
-          position: absolute;
-          margin: 15px 245px;
-          color: $cis;
-        }
-      }
-    }
-    .indexProduct-name {
-      padding: $sp-3 $sp-6 $sp-3 $sp-5;
-      border: 2px solid $l-gray;
-      letter-spacing: 1px;
-      @include f-2;
-    }
-    .prductPrice {
-      margin-left: -2px;
-      padding: $sp-3 27.5px $sp-3 $sp-5;
-      border: 2px solid $l-gray;
-      @include f-2;
-    }
-    .shopping-btn {
-      text-align: center;
-      a {
-        padding: $sp-3 0px;
-        display: block;
-        background-color: $l-cis;
+        margin: 15px 245px;
         color: $cis;
-        @include f-2;
-       transition: 0.8s ease-out 0s;
-       &:hover{
-         color: $wht;
-       }
       }
     }
   }
-
-
+  .indexProduct-name {
+    padding: $sp-3 $sp-6 $sp-3 $sp-5;
+    border: 2px solid $l-gray;
+    letter-spacing: 1px;
+    @include f-2;
+  }
+  .prductPrice {
+    margin-left: -2px;
+    padding: $sp-3 27.5px $sp-3 $sp-5;
+    border: 2px solid $l-gray;
+    @include f-2;
+  }
+  .shopping-btn {
+    text-align: center;
+    a {
+      padding: $sp-3 0px;
+      display: block;
+      background-color: $l-cis;
+      color: $cis;
+      @include f-2;
+      transition: 0.8s ease-out 0s;
+      &:hover {
+        color: $wht;
+      }
+    }
+  }
+}
+.indexProductSize-md-dn{
+  display: block;
+}
+@include phone{
+  .indexProductSize-md-dn{
+    display: none;
+  }
+}

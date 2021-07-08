@@ -1,5 +1,4 @@
 // iteam start
-
 main {
   margin-top: $sp-11;
   flex-wrap: wrap;
@@ -25,6 +24,21 @@ main {
     }
   }
 }
+@include pad {
+  main {
+    margin-top: -2px;
+    .product-items-area {
+      display: block;
+      .product-items {
+        margin: 0px auto;
+        width: 100%;
+        li {
+          @include f-2;
+        }
+      }
+    }
+  }
+}
 .product-items-abled {
   color: $cis;
 }
@@ -38,23 +52,30 @@ main {
 }
 
 // pag start
-.page {
+.page-control {
   justify-content: flex-end;
-  li {
-    a {
-      margin-left: -1px;
-      color: lighten($cis, 30%);
-      display: block;
-      padding: $sp-3 $sp-4;
-      border-right: 1px solid $cis;
-      border-left: 1px solid $cis;
-      transition: 0.3s ease-in 0s;
-      &:hover {
-        color: $wht;
-        background-color: $cis;
-        text-decoration: underline;
+  .page {
+    li {
+      a {
+        margin-left: -1px;
+        color: lighten($cis, 30%);
+        display: block;
+        padding: $sp-3 $sp-4;
+        border-right: 1px solid $cis;
+        border-left: 1px solid $cis;
+        transition: 0.3s ease-in 0s;
+        &:hover {
+          color: $wht;
+          background-color: $cis;
+          text-decoration: underline;
+        }
       }
     }
+  }
+}
+@include pad {
+  .page-control {
+    justify-content: center;
   }
 }
 
@@ -128,7 +149,8 @@ main {
 
 //cart product start
 .cart-product {
-  margin-top: 67px;
+  margin-top: 47px;
+
   .yourCart-control {
     width: 620px;
     h2 {
@@ -142,20 +164,23 @@ main {
       }
     }
     .cart-product-control {
+      display: flex;
       justify-content: space-between;
       align-items: center;
       margin: $sp-6 0px;
-
       img {
         width: 110px;
       }
+
       .cart-product-name {
         h3 {
           @include f-2;
           margin-bottom: 3px;
         }
       }
-      .product-quantity {
+      .product-quantity-xs {
+        display: none;
+        margin-top: $sp;
         a,
         p {
           padding: $sp-3 $sp-4;
@@ -168,11 +193,74 @@ main {
           background-color: $cis;
         }
       }
-      a {
+      .product-quantity {
+        display: flex;
+        a,
+        p {
+          padding: $sp-3 $sp-4;
+          border: 1px solid $l-cis;
+          color: $cis;
+        }
+        a:hover {
+          font-weight: bolder;
+          color: $wht;
+          background-color: $cis;
+        }
+      }
+      .totalAmount {
+        font-weight: bolder;
+      }
+      .trash-btn {
         color: $y-cis;
       }
     }
+    .totalAmount-xs {
+      display: none;
+      justify-content: flex-end;
+      @include f-3;
+      font-weight: bold;
+      border-top: 1px dashed;
+      border-bottom: 1px dashed;
+      padding: $sp-2 $sp-6;
+      margin-bottom: $sp-9;
+    }
   }
+  @include pad {
+    .yourCart-control {
+      margin: 0 auto;
+      .cart-product-control {
+        justify-content: space-between;
+        margin: $sp-2 $sp-6;
+      }
+    }
+  }
+
+  @include phone {
+    .yourCart-control {
+      .cart-product-control {
+        img {
+          width: 150px;
+        }
+        .product-quantity-xs {
+          display: flex;
+        }
+        .product-quantity {
+          display: none;
+        }
+        .totalAmount {
+          display: none;
+        }
+        .trash-btn {
+          display: none;
+        }
+      }
+
+      .totalAmount-xs {
+        display: flex;
+      }
+    }
+  }
+
   .list-items {
     margin-top: 60px;
     width: 300px;
@@ -206,6 +294,28 @@ main {
       }
     }
   }
+  @include pad {
+    .list-items {
+      margin: 0px auto;
+      width: 80%;
+      .list-content {
+        padding: $sp-6;
+        p {
+          @include f-2;
+          line-height: $sp-6;
+        }
+      }
+      a {
+        padding: $sp-6;
+        @include f-3;
+      }
+    }
+  }
+}
+@include pad {
+  .cart-product {
+    margin-top: 83px;
+  }
 }
 
 //cart information
@@ -214,6 +324,12 @@ main {
   img {
     margin: $sp-2;
     width: 110px;
+  }
+}
+.list-items-md-dn {
+  display: block;
+  @include pad {
+    display: none;
   }
 }
 
@@ -262,7 +378,20 @@ main {
       padding: $sp-4 0px;
       text-align: center;
       background-color: $l-cis;
-
+      &:hover {
+        color: $wht;
+        background-color: $y-cis;
+      }
+    }
+  }
+}
+@include pad {
+  .shippingInformation {
+    margin: 0px auto;
+    .fillInTheInformation {
+      a {
+        margin: $sp-8;
+      }
     }
   }
 }

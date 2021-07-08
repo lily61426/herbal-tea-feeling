@@ -6,29 +6,7 @@
   }
 }
 
-//product banner-2 start
-.banner2 {
-  position: relative;
-
-  img {
-    margin-top: 66px;
-    max-width: 100%;
-  }
-  h2 {
-    writing-mode: vertical-rl;
-    position: absolute;
-    top: 130px;
-    right: 100px;
-    z-index: 50;
-    @include f-4;
-    font-weight: bolder;
-    color: $l-gray;
-    line-height: $lh-9;
-    letter-spacing: $sp;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
-  }
-}
-
+//本日精選、人氣推薦、新品上市
 .productNews-style {
   height: 260px;
   width: 256px;
@@ -36,7 +14,6 @@
   position: relative;
   top: -130px;
 }
-
 
 .productNews {
   flex-wrap: wrap;
@@ -70,7 +47,7 @@
 
     .productNews-style {
       max-width: 195px;
-      top: -10px;
+      top: -150px;
       .index-product-news-btn {
         max-width: 195px;
       }
@@ -83,10 +60,41 @@
 
     .productNews-style {
       max-width: 120px;
-      top: -10px;
+      top: -80px;
       .index-product-news-btn {
         max-width: 120px;
       }
+    }
+  }
+}
+
+//product banner-2 start
+.banner2 {
+  position: relative;
+  img {
+    margin-top: 66px;
+    max-width: 100%;
+  }
+  h2 {
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 110px;
+    right: 100px;
+    z-index: 50;
+    @include f-4;
+    font-weight: bolder;
+    color: $l-gray;
+    line-height: $lh-9;
+    letter-spacing: $sp;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.678);
+  }
+  @include pad {
+    h2 {
+      writing-mode: horizontal-tb;
+      top: 110px;
+      left: 20px;
+      right: auto;
+      color: $l-cis;
     }
   }
 }
@@ -98,6 +106,12 @@
   img {
     margin-top: 66px;
     max-width: 100%;
+    &:hover {
+      filter: blur(2px);
+    }
+  }
+  .banner3-3-md {
+    display: none;
   }
   .successful-purchase {
     position: absolute;
@@ -121,60 +135,169 @@
       box-shadow: 2px 2px 0.5em $blk;
     }
   }
+
+  @media screen and (max-width: 850px) {
+    .successful-purchase {
+      top: 300px;
+      left: 290px;
+    }
+  }
+  @include pad {
+    .banner3-md-dn {
+      display: none;
+    }
+    .banner3-3-md {
+      display: block;
+    }
+    .successful-purchase {
+      top: 200px;
+      left: 250px;
+    }
+  }
+  @include phone {
+    .successful-purchase {
+      top: 120px;
+      left: 150px;
+    }
+  }
+  @media screen and (max-width: 630px) {
+    .successful-purchase {
+      top: 150px;
+      left: 180px;
+      h2 {
+        color: $l-cis;
+      }
+    }
+  }
+  @media screen and (max-width: 460px) {
+    .successful-purchase {
+      top: 80px;
+      left: 90px;
+      h2 {
+        color: $l-cis;
+      }
+    }
+  }
 }
 
-
 // index slogan  start
-main {
+.myMain {
+  margin-top: -100px;
   .slogan {
-    position: relative;
-    top: -80px;
-    z-index: 50;
+    margin-top: -270px;
+    color: $y-cis;
+  }
+  .slogan-md {
+    display: none;
     color: $y-cis;
   }
   .slogan2 {
-    position: relative;
-    top: -15px;
-    left: 380px;
-    z-index: 50;
+    margin-top: -200px;
+    color: $y-cis;
+  }
+  .slogan2-md {
+    display: none;
     color: $y-cis;
   }
   .slogan3 {
     color: $y-cis;
     line-height: $lh-9;
   }
+  @media screen and (max-width: 999px) {
+    .slogan {
+      display: none;
+    }
+    .slogan-md {
+      margin-top: $sp-5;
+      margin-bottom: $sp-12;
+      display: block;
+      text-align: center;
+      color: $y-cis;
+      writing-mode: horizontal-tb;
+    }
+    .slogan2 {
+      display: none;
+    }
+    .slogan2-md {
+      margin-top: $sp-5;
+      margin-bottom: $sp-12;
+      display: block;
+      text-align: center;
+      color: $y-cis;
+      writing-mode: horizontal-tb;
+    }
+    .slogan3{
+      writing-mode: horizontal-tb;
+    }
+  }
+  @include phone {
+    .slogan-md {
+      margin-top: $sp-12;
+    }
+  }
   h2 {
     @include f-4;
     letter-spacing: 5px;
     font-weight: bold;
   }
-  .img-1 {
-    max-width: 460px;
-    position: absolute;
-    top: 980px;
-    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.413);
-    z-index: 50;
-  }
-  .img-2 {
-    max-width: 460px;
-    position: absolute;
-    top: 1490px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.413);
-    z-index: 50;
-  }
 
   .brandNews {
+    margin-top: 70px;
     background-color: $l-cis;
-    margin-top: -250px;
+  }
+  .brandNews2 {
+    margin-top: 90px;
+    background-color: $l-cis;
+  }
+  .brandNews-content {
+    align-items: center;
+    justify-content: space-between;
+    height: 420px;
+    p {
+      white-space: pre-line;
+      font-size: $fz-1;
+      line-height: $lh-5;
+      letter-spacing: 2px;
+      writing-mode: vertical-rl;
+      height: 250px;
+    }
+    .img-1 {
+      max-width: 460px;
+    }
+  }
+
+  @include pad {
+    .brandNews {
+      margin-top: 450px;
+    }
+    .brandNews2 {
+      margin-top: 460px;
+    }
     .brandNews-content {
-      height: 420px;
+      flex-direction: column-reverse;
       p {
-        white-space: pre-line;
-        font-size: $fz-1;
-        line-height: $lh-5;
-        letter-spacing: 2px;
-        writing-mode: vertical-rl;
-        height: 250px;
+        margin: $sp-8 $sp-13;
+        writing-mode: lr-tb;
+      }
+      .img-1 {
+        max-width: 80%;
+      }
+    }
+  }
+  @include phone {
+    .brandNews {
+      margin-top: 300px;
+    }
+    .brandNews2 {
+      margin-top: 320px;
+    }
+    .brandNews-content {
+      p {
+        margin: $sp-6 $sp-6;
+        writing-mode: lr-tb;
+      }
+      .img-1 {
+        max-width: 85%;
       }
     }
   }
